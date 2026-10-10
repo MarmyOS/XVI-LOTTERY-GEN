@@ -1,0 +1,11 @@
+{
+  "lotto": {
+    "datum": "2026-10-10",
+    "bedrag": 2000000
+  },
+  "euromillions": {
+    "datum": "2026-10-13",
+    "bedrag": 37000000,
+    "ongeveer": true
+  }
+}

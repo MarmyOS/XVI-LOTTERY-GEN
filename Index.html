@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#e5271a" id="theme-color">
+    <title>XVI nummergenerator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-game="lotto">
+<main class="app">
+    <h1 class="titel">XVI nummergenerator</h1>
+
+    <div class="tabs" role="tablist" aria-label="Kies een spel">
+        <button class="tab" role="tab" id="tab-euromillions" data-game="euromillions" aria-selected="false" aria-controls="paneel">
+        <span class="logo logo-euro">
+          <svg class="ster-icoon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#f9b24b" d="M12 1l3 7.6 8 .6-6.1 5.2 1.9 7.8L12 18l-6.8 4.2 1.9-7.8L1 9.2l8-.6z"/></svg>
+          <span>Euro<br>Millions</span>
+        </span>
+        </button>
+        <button class="tab" role="tab" id="tab-lotto" data-game="lotto" aria-selected="true" aria-controls="paneel">
+            <span class="logo logo-lotto">lotto</span>
+        </button>
+    </div>
+
+    <section class="hero" aria-live="polite">
+        <p class="spel" id="hero-spel"></p>
+        <p class="regel" id="hero-regel">Today is your day</p>
+    </section>
+
+    <section class="kaart" id="paneel" role="tabpanel">
+        <div class="kaart-kop" id="kaart-kop"></div>
+        <div class="kaart-body">
+            <div class="controls">
+                <div class="aantal" role="group" aria-label="Aantal rijen">
+                    <span>Rijen</span>
+                    <button class="stap" id="min" aria-label="Minder rijen">&minus;</button>
+                    <output id="aantal" aria-live="polite">1</output>
+                    <button class="stap" id="plus" aria-label="Meer rijen">+</button>
+                </div>
+                <button class="knop" id="genereer">Genereer nummers</button>
+            </div>
+
+            <div class="resultaten" id="resultaten" aria-live="polite"></div>
+            <button class="kopieer" id="kopieer" hidden>Kopieer nummers</button>
+        </div>
+    </section>
+
+    <p class="voet">Elke combinatie heeft evenveel kans. Speel met mate.</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
